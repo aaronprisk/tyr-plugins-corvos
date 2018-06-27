@@ -1,0 +1,18 @@
+{
+	"icon": "",
+	"label": "Student Profile Cleaner",
+	"description": "Enable startup task that cleans student profile on login.",
+	"license": "",
+	"category": "CorvOS",
+	"scripts": {
+		"exec": {
+			"label": "Install",
+			"command": "run-as-root -s install.sh"
+		},
+		"undo": {
+			"label": "Remove",
+			"command": "run-as-root -s uninstall.sh"
+		},
+		"status": { "command": "test -f /home/student/.config/autostart/Cleaner.desktop" }
+	}
+}
